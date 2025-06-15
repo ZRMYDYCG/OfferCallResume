@@ -5,13 +5,17 @@ import Template from '@/pages/template/index.vue'
 const routes = [
   {
     path: '/',
-    name: 'Template',
-    component: Template,
+    redirect: '/editor',
   },
   {
     path: '/editor',
     name: 'Editor',
     component: Editor,
+  },
+  {
+    path: '/template',
+    name: 'Template',
+    component: Template,
   },
 ]
 
