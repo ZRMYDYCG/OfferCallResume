@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <div />
+    <n-button>naive-ui</n-button>
   </div>
 </template>
 

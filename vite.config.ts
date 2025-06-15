@@ -2,7 +2,11 @@ import * as path from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { visualizer } from 'rollup-plugin-visualizer'
+import AutoImport from 'unplugin-auto-import/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+
 import viteCompression from 'vite-plugin-compression'
 import { buildInfoPlugin, hmrGuardPlugin } from './vite/custom-plugin/index'
 
@@ -13,6 +17,22 @@ export default defineConfig({
     vue(),
     buildInfoPlugin(),
     hmrGuardPlugin(),
+    AutoImport({
+      imports: [
+        'vue',
+        {
+          'naive-ui': [
+            'useDialog',
+            'useMessage',
+            'useNotification',
+            'useLoadingBar',
+          ],
+        },
+      ],
+    }),
+    Components({
+      resolvers: [NaiveUiResolver()],
+    }),
     // 生产环境启用gzip压缩
     viteCompression({
       algorithm: 'gzip',
@@ -25,7 +45,7 @@ export default defineConfig({
       gzipSize: true,
       brotliSize: true,
     }),
-  ] as any,
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
