@@ -112,12 +112,128 @@ export const inkPaintingTheme: GlobalThemeOverrides = {
   },
 }
 
+// 中国传统色系主题 - 唐风华韵（盛唐风格）黑夜模式
+export const tangDynastyThemeDark: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#C44A4B', // 亮朱红
+    primaryColorHover: '#D96A7E',
+    primaryColorPressed: '#A83A3A',
+    primaryColorSuppl: '#E07A8E',
+    successColor: '#5A7F76', // 亮石绿
+    warningColor: '#D98E6E', // 亮赭石
+    errorColor: '#C44A4B', // 亮朱红
+    infoColor: '#6A8FA5', // 亮天青
+    textColorBase: '#F5F1E6', // 米白
+    textColor1: '#E5E1D6',
+    textColor2: '#D5D1C6',
+    textColor3: '#C5C1B6',
+    borderColor: '#897E6F',
+  },
+  Button: {
+    textColor: '#F5F1E6',
+    borderRadius: '4px',
+  },
+  Card: {
+    borderRadius: '8px',
+    border: '1px solid #897E6F',
+    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+  },
+}
+
+// 中国传统色系主题 - 宋瓷雅韵（宋代青瓷风格）黑夜模式
+export const songDynastyThemeDark: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#7E9F94', // 亮青瓷色
+    primaryColorHover: '#9ABEB2',
+    primaryColorPressed: '#5E7F74',
+    primaryColorSuppl: '#B4D0C6',
+    successColor: '#7E9F94', // 亮青瓷色
+    warningColor: '#E4C5AE', // 亮米色
+    errorColor: '#C64E46', // 亮祭红
+    infoColor: '#AABE7B', // 亮茶叶末
+    textColorBase: '#E7E5E0', // 浅灰白
+    textColor1: '#D7D5D0',
+    textColor2: '#C7C5C0',
+    textColor3: '#A7A5A0',
+    borderColor: '#908878',
+  },
+  Button: {
+    textColor: '#F7F5F0',
+    borderRadius: '2px',
+  },
+  Card: {
+    borderRadius: '4px',
+    border: '1px solid #908878',
+    boxShadow: '0 1px 4px rgba(0, 0, 0, 0.3)',
+  },
+}
+
+// 中国传统色系主题 - 青花古韵（青花瓷风格）黑夜模式
+export const blueAndWhiteThemeDark: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#5B7FBF', // 亮青花蓝
+    primaryColorHover: '#7A9FCF',
+    primaryColorPressed: '#3B5F8F',
+    primaryColorSuppl: '#9ABFDF',
+    successColor: '#4E9D52', // 亮青花绿
+    warningColor: '#FFC020', // 亮琥珀黄
+    errorColor: '#E64848', // 亮祭红
+    infoColor: '#5B7FBF', // 亮青花蓝
+    textColorBase: '#EAEAEA', // 瓷白
+    textColor1: '#DADADA',
+    textColor2: '#CACACA',
+    textColor3: '#AAAAAA',
+    borderColor: '#808080',
+  },
+  Button: {
+    textColor: '#FAFAFA',
+    borderRadius: '4px',
+  },
+  Card: {
+    borderRadius: '6px',
+    border: '1px solid #808080',
+    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.3)',
+  },
+}
+
+// 中国传统色系主题 - 水墨丹青（水墨画风格）黑夜模式
+export const inkPaintingThemeDark: GlobalThemeOverrides = {
+  common: {
+    primaryColor: '#4D5B65', // 亮墨黑
+    primaryColorHover: '#6A7A86',
+    primaryColorPressed: '#2D3B45',
+    primaryColorSuppl: '#8A9AA6',
+    successColor: '#6A8A7F', // 亮石绿
+    warningColor: '#C69C72', // 亮赭石
+    errorColor: '#AA4338', // 亮朱砂
+    infoColor: '#5A7F76', // 亮青绿
+    textColorBase: '#F9F7F1', // 宣纸白
+    textColor1: '#E9E7D1',
+    textColor2: '#D9D7C1',
+    textColor3: '#B9B7A1',
+    borderColor: '#999380',
+  },
+  Button: {
+    textColor: '#F9F7F1',
+    borderRadius: '2px',
+  },
+  Card: {
+    borderRadius: '4px',
+    border: '1px solid #999380',
+    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
+  },
+}
+
 // 主题列表
 export const themeList = {
   tangDynasty: { name: '唐风华韵', theme: tangDynastyTheme },
+  tangDynastyDark: { name: '唐风华韵(黑夜)', theme: tangDynastyThemeDark },
   songDynasty: { name: '宋瓷雅韵', theme: songDynastyTheme },
+  songDynastyDark: { name: '宋瓷雅韵(黑夜)', theme: songDynastyThemeDark },
   blueAndWhite: { name: '青花古韵', theme: blueAndWhiteTheme },
+  blueAndWhiteDark: { name: '青花古韵(黑夜)', theme: blueAndWhiteThemeDark },
   inkPainting: { name: '水墨丹青', theme: inkPaintingTheme },
+  inkPaintingDark: { name: '水墨丹青(黑夜)', theme: inkPaintingThemeDark },
 }
 
 export type ThemeKey = keyof typeof themeList
