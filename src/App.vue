@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <n-button>naive-ui</n-button>
+    <router-view />
   </div>
 </template>
 
