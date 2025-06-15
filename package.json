@@ -1,0 +1,50 @@
+{
+  "name": "OfferCallResume",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "pnpm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "cd cli && pnpm link --global",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "eslint:config": "npx @eslint/config-inspector@latest",
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "release": "release-it",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "@tailwindcss/vite": "^4.1.9",
+    "tailwindcss": "^4.1.9",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vue/tsconfig": "^0.7.0",
+    "axios": "^1.9.0",
+    "eslint": "^9.28.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "release-it": "^19.0.3",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "terser": "^5.42.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vue-tsc": "^2.2.8"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
